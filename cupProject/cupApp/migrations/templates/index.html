@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h1>IT'S ME THE G.O.A.T CODER</h1>
+{% if allCups %}
+<ul>
+    {% for cup in allCups %}
+    <li>{{ cup.name }}</li>
+    {% endfor %}
+</ul>
+{% else %}
+<p>You didn't enter anything.</p>
+{% endif %}
+
+<h2>Here are all cups manufactured after 2012</h2>
+{% if cupsafter2012 %}
+<ul>
+    {% for cup in cupsafter2012 %}
+    <li>{{ cup.name }}</li>
+    {% endfor %}
+</ul>
+{% else %}
+<p>You didn't enter anything.</p>
+{% endif %}
+</body>
+</html>
