@@ -10,4 +10,5 @@ urlpatterns = [
     path('newCup',views.newCup,name='newCup'),
     path('allPurchase/',views.allPurchase,name="allPurchase"),
     path('newMaterial/',views.newMaterial,name="slightlyNew"),
+    path('templateAll/',views.templateAll,name='templateAll')
 ]

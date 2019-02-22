@@ -17,10 +17,10 @@
 {% endif %}
 
 <h2>Here are all cups manufactured after 2012</h2>
-{% if cupsafter2012 %}
+{% if allCups %}
 <ul>
-    {% for cup in cupsafter2012 %}
-    <li>{{ cup.name }}</li>
+    {% for cup in cupafter2012 %}
+    <li>Name:{{ cup.name }}     Manufacuture Date:{{cup.manufactuerDate}}</li>
     {% endfor %}
 </ul>
 {% else %}

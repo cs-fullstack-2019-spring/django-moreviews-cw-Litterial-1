@@ -32,7 +32,7 @@ def newCup(request):
         newCup2.save()
         return HttpResponse(newCup2)
     def Cup3():
-        newCup3=Cup (name = "Kenn's Cup",material = "Styrofoam",manufactuerDate = '2019-2-3')
+        newCup3=Cup (name = "Kevin's Cup",material = "Bamboo",manufactuerDate = '2014-5-27')
         newCup3.save()
         return HttpResponse(newCup3)
 
@@ -77,12 +77,12 @@ def newMaterial(request):
         print('\n')
     return HttpResponse()
 
-def all (request):
+def templateAll (request):
     allCups=Cup.objects.all()
-    cupafter2012= Cup.objects.filter(manufactuerDate__gt = 2012-12-31)
+    cupafter2012= Cup.objects.filter(manufactuerDate__gt = '2012-12-31')
     context= {
         'allCups':allCups,
         'cupafter2012':cupafter2012,
     }
 
-    return render(request,'cupApp.index.html',context)
+    return render(request,'cupApp/index.html',context)
